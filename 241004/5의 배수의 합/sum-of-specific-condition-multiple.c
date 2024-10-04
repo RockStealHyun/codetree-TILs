@@ -4,6 +4,7 @@ int main() {
 
 	int a,b,i;
 	int sum_val = 0;
+    scanf("%d%d",&a,&b);
 
     if(a>=b)
 	for (int i = b; i <= a; i++) {
