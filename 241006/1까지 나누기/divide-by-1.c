@@ -4,7 +4,7 @@ int main() {
     int n;
     scanf("%d",&n);
     int i;
-    
+    div = 
 
     for(i=1;i<=n;i++)
     {
@@ -16,6 +16,6 @@ int main() {
         }
     }
      printf("%d\n",i);
-    // 여기에 코드를 작성해주세요.
+
     return 0;
 }
