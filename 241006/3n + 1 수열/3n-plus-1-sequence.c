@@ -18,7 +18,7 @@ int main() {
 
         }
 
-        if (N == 1) {  
+    if (N == 1) {  
 
             break;
         }
