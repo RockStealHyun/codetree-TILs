@@ -13,7 +13,7 @@ int main() {
         }
     }
     
-    printf("%d", n);  // sum 값을 출력
+    printf("%d", i);  // sum 값을 출력
 
     return 0;
 }
