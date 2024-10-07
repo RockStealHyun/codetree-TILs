@@ -8,7 +8,7 @@ int main() {
 
 	bool satisfied = false;
 	for (i = a; i <= b; i++) {
-		if (240%i==0) {
+		if (960%i==0) {
 			satisfied = true;
 		}
 		else if (a==b==1)
