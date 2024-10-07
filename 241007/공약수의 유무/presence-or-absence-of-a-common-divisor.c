@@ -8,9 +8,11 @@ int main() {
 
 	bool satisfied = false;
 	for (i = a; i <= b; i++) {
-		if ((240%i==0)) {
+		if (240%i==0) {
 			satisfied = true;
 		}
+		else if (a==b==1)
+			continue;
 	}
 	if (satisfied == true) {
 		printf("1");
