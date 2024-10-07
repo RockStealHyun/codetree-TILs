@@ -8,7 +8,7 @@ int main() {
 
 	bool satisfied = false;
 	for (i = a; i <= b; i++) {
-		if (i % (2||3||5) == 0) {
+		if ((i % 2 == 0 || i % 3 == 0 || i % 5 == 0) == 0) {
 			satisfied = true;
 		}
 	}
