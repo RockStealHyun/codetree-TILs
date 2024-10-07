@@ -11,8 +11,7 @@ int main() {
 		if (960%i==0) {
 			satisfied = true;
 		}
-		else if (a==b==1)
-			continue;
+	
 	}
 	if (satisfied == true) {
 		printf("1");
