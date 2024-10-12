@@ -17,8 +17,8 @@ int main() {
         	sum1 = arr_2d[0][j] + sum1;
         	sum2 = arr_2d[1][j] + sum2;
     }
-    printf("%.1f ", (float)(sum1/4));
-    printf("%.1f\n", (float)(sum2/4));
+    printf("%.1f ", (float)(sum1)/4);
+    printf("%.1f\n", (float)(sum2)/4);
 
 
 	int sum3 = 0;
