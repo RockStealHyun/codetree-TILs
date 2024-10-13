@@ -3,15 +3,15 @@
 int main() {
 
     int i, j;
-    int num=1;
+    int num=0;
 	int arr_2d[4][3];
 
 
 	for (int i = 0; i < 4; i++) {
 		for (int j = 0; j < 3; j++) {
-			
-            arr_2d[i][j] = num;
 			num += 1;
+            arr_2d[i][j] = num;
+			
 		}
 	}
 
