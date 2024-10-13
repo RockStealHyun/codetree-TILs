@@ -4,7 +4,7 @@ int main() {
 
     int i;
 	int n;
-    int arr[i],brr[i] ;
+    int arr[n],brr[n] ;
 
     scanf("%d",&n);
 
