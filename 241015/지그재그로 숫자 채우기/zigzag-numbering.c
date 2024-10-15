@@ -8,7 +8,7 @@ int main() {
     // 입력:
     scanf("%d %d", &n, &m);
     
-    // Step 1:
+    // 값을 지정해주는 중
     int count = 0;
     for(int col = 0; col < m; col++) {
         if (col % 2 == 0){
@@ -27,7 +27,7 @@ int main() {
         }
     }
     
-    // 출력:
+    // 집어넣고 출력하는중
     for(int row = 0; row < n; row++) {
         for(int col = 0; col < m; col++) 
             printf("%d ", answer[row][col]);
