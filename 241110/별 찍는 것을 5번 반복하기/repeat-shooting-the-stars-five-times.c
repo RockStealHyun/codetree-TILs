@@ -1,17 +1,18 @@
-#include <iostream>
+#include <stdio.h>
 
-using namespace std;
-
+// 별 10개를 출력하는 함수
 void Print10Stars() {
-    for(int i = 0; i < 10; i++)
-        cout << "*";
-    cout << endl;
+    for(int i = 0; i < 10; i++) {
+        printf("*");
+    }
+    printf("\n");
 }
 
 int main() {
-
-    for(int i = 0; i < 5; i++)
-        Print10Stars(); 
-
+    // 별 10개를 출력하는 함수를 5번 호출
+    for(int i = 0; i < 5; i++) {
+        Print10Stars();
+    }
+    
     return 0;
 }
