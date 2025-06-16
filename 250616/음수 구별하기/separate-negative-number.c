@@ -2,7 +2,7 @@
 
 int main() {
     int N;
-    scanf("%d",&N);
+    scanf("%d\n",&N);
     printf("%d",N);
 
     if(N <= -1){
