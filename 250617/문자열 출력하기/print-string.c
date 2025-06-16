@@ -8,7 +8,7 @@ int main() {
     
     // 출력
 	for(int i = 1; i <= N; i++)
-		printf("LeebrosCode");
+		printf("LeebrosCode\n");
 
     return 0;
 }
