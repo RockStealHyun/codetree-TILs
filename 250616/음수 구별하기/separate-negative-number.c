@@ -2,8 +2,8 @@
 
 int main() {
     int N;
-    scanf("%d\n",&N);
-    printf("%d",N);
+    scanf("%d",&N);
+    printf("%d\n",N);
 
     if(N <= -1){
         printf("minus");
