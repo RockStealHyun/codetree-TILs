@@ -5,7 +5,7 @@ int main() {
     scanf("%d", &N);
 
     if (N>=3000) {
-    printf("mask");
+    printf("book");
     }
     else if (N<3000 && N>=1000) {
     printf("mask");
