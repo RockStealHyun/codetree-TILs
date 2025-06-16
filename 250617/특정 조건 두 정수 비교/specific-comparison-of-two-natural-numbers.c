@@ -9,10 +9,18 @@ int main() {
 
 
     if(A<B) {
+        printf("1 ");
+    } else {
+        printf("0 ");
+    }
+    if(A==B) {
         printf("1");
     } else {
         printf("0");
     }
+
+
+
 
     return 0;
 }
