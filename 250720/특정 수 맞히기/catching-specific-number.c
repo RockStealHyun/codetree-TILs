@@ -10,7 +10,8 @@ int main() {
 
         if (A < 25) {
             printf("Higher\n");
-        } else {
+        } 
+        else if(A>25){
             printf("Lower\n");
         }
     if(A==25)
