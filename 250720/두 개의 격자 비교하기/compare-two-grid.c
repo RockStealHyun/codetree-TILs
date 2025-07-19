@@ -1,45 +1,36 @@
 #include <stdio.h>
 
 int main() {
-    int N, M;
-    int a[10][10], b[10][10], result[10][10];
-    int i, j;
+    // n, m을 입력받습니다.
+    int n, m;
+    scanf("%d %d", &n, &m);
 
-    // N: 행 개수, M: 열 개수 입력
-    scanf("%d %d", &N, &M);
-
-    // 첫 번째 격자 입력
-    for(i = 0; i < N; i++) {
-        for(j = 0; j < M; j++) {
-            scanf("%d", &a[i][j]);
-        }
-    }
-
-    // 두 번째 격자 입력
-    for(i = 0; i < N; i++) {
-        for(j = 0; j < M; j++) {
-            scanf("%d", &b[i][j]);
-        }
-    }
-
-    // 두 격자 비교 후 결과 격자 저장
-    for(i = 0; i < N; i++) {
-        for(j = 0; j < M; j++) {
-            if(a[i][j] == b[i][j]) {
-                result[i][j] = 0;
-            } else {
-                result[i][j] = 1;
-            }
-        }
-    }
-
-    // 결과 출력
-    for(i = 0; i < N; i++) {
-        for(j = 0; j < M; j++) {
-            printf("%d", result[i][j]);
-        }
-        printf("\n");
-    }
+    // 2차원 배열을 구현합니다.
+	int arr_1[10][10];
+	int arr_2[10][10];
+    int arr_3[10][10];
+	
+	// 첫 번째 배열의 입력을 받습니다.
+	for(int i = 0; i < n; i++)
+		for(int j = 0; j < m; j++)
+			scanf("%d", &arr_1[i][j]);
+	
+	// 두 번째 배열의 입력을 받습니다.
+	for(int i = 0; i < n; i++)
+		for(int j = 0; j < m; j++)
+			scanf("%d", &arr_2[i][j]);
+	
+	// 두 배열의 같음 여부를 새로운 배열에 담습니다.
+	for(int i = 0; i < n; i++)
+		for(int j = 0; j < m; j++)
+			arr_3[i][j] = arr_1[i][j] == arr_2[i][j] ? 0 : 1;
+	
+	// 새로운 배열을 출력합니다.
+	for(int i = 0; i < n; i++) {
+		for(int j = 0; j < m; j++)
+			printf("%d ", arr_3[i][j]);
+		printf("\n");
+	}
 
     return 0;
 }
