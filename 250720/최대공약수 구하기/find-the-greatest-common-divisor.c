@@ -1,23 +1,26 @@
 #include <stdio.h>
 
-// N×N 크기의 숫자 사각형을 출력하는 함수
-// 1부터 시작해서 9 다음에는 다시 1로 돌아갑니다.
-void printSquare(int N) {
-    for (int i = 0; i < N; i++) {         // 각 행을 반복
-        for (int j = 0; j < N; j++) {     // 한 행 안에서 N개의 숫자를 출력
-            int idx = i * N + j;          // 0부터 시작하는 인덱스
-            int num = (idx % 9) + 1;      // 1~9 반복하도록 계산
-            printf("%d ", num);           // 숫자 출력 뒤에 공백
-        }
-        printf("\n");                     // 한 행을 다 출력하면 줄바꿈
+// 두 정수 a, b의 최대공약수를 계산해 돌려주는 함수
+int gcd(int a, int b) {
+    // b가 0이 될 때까지 나머지를 이용해 반복
+    while (b != 0) {
+        int temp = a % b;  // a를 b로 나눈 나머지 저장
+        a = b;             // a에 이전 b 값을 넣고
+        b = temp;          // b에 나머지를 넣어서 다음 반복 준비
     }
+    return a;  // b가 0이 되면 a가 최대공약수
 }
 
 int main(void) {
-    int N;
-    // 정수 하나 입력받기
-    scanf("%d", &N);
-    // 함수를 호출해 사각형 출력
-    printSquare(N);
+    int n, m;
+    // 두 정수를 입력받음
+    scanf("%d %d", &n, &m);
+
+    // 함수 호출로 최대공약수 계산
+    int result = gcd(n, m);
+
+    // 결과 출력
+    printf("%d\n", result);
+
     return 0;
 }
