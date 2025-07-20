@@ -4,7 +4,8 @@ int main(void) {
     int N;
     scanf("%d", &N);
 
-    char ch = 'A';  // 알파벳 시작
+    char ch = 'A';
+
     for (int i = 0; i < N; i++) {
         printf("%c", ch);
 
