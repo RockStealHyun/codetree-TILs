@@ -1,19 +1,20 @@
 #include <stdio.h>
 
-void change(int *a, int *b) {
-    if (*a > *b) {        // a가 더 큼
-        *a += 25;
-        *b *= 2;
-    } else {              // b가 더 큼
-        *b += 25;
-        *a *= 2;
-    }
+void make_abs(int a[], int n) {      // 절댓값으로 바꾸기 (반환 X)
+    for (int i = 0; i < n; i++)
+        if (a[i] < 0) a[i] = -a[i];
 }
 
 int main(void) {
-    int a, b;
-    scanf("%d %d", &a, &b);
-    change(&a, &b);
-    printf("%d %d", a, b);
+    int N, x[50];
+    scanf("%d", &N);
+    for (int i = 0; i < N; i++) scanf("%d", &x[i]);
+
+    make_abs(x, N);
+
+    for (int i = 0; i < N; i++) {
+        if (i) printf(" ");
+        printf("%d", x[i]);
+    }
     return 0;
 }
