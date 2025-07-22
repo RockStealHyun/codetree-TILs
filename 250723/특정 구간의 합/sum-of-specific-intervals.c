@@ -1,20 +1,22 @@
 #include <stdio.h>
-#include <string.h>
 
-int find_sub(char s[], char t[]) {      // t가 s에 있으면 시작 인덱스, 없으면 -1
-    int n = strlen(s), m = strlen(t);
-    for (int i = 0; i <= n - m; i++) {
-        int j = 0;
-        while (j < m && s[i + j] == t[j]) j++;
-        if (j == m) return i;
-    }
-    return -1;
+int A[105];                 // 전역 배열
+
+int seg_sum(int l, int r) { // l~r 합
+    int s = 0;
+    for (int i = l; i <= r; i++) s += A[i];
+    return s;
 }
 
 int main(void) {
-    char S[1001], T[1001];
-    scanf("%s", S);
-    scanf("%s", T);
-    printf("%d", find_sub(S, T));
+    int N, M;
+    scanf("%d %d", &N, &M);
+    for (int i = 1; i <= N; i++) scanf("%d", &A[i]);
+
+    for (int i = 0; i < M; i++) {
+        int a1, a2;
+        scanf("%d %d", &a1, &a2);
+        printf("%d\n", seg_sum(a1, a2));
+    }
     return 0;
 }
