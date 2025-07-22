@@ -1,26 +1,18 @@
-#include <iostream>
-#include <string>
+#include <stdio.h>
+#include <string.h>
 
-using namespace std;
-
-string str;
-
-bool Palindrome(string &s) {
-    for(int i = 0; i < (int) s.size(); i++)
-        if(s[i] != s[(int) s.size() - i - 1])
-            return false;
-    
-    return true;
+int is_pal(char s[]) {          // 팰린드롬이면 1, 아니면 0
+    int l = 0, r = (int)strlen(s) - 1;
+    while (l < r) {
+        if (s[l] != s[r]) return 0;
+        l++; r--;
+    }
+    return 1;
 }
 
-int main() {
-    // 입력:
-    cin >> str;
-
-    if(Palindrome(str))
-        cout << "Yes";
-    else
-        cout << "No";
-
+int main(void) {
+    char A[105];
+    scanf("%s", A);
+    printf(is_pal(A) ? "Yes" : "No");
     return 0;
 }
