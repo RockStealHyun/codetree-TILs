@@ -1,12 +1,12 @@
 #include <stdio.h>
 
 void change(int *a, int *b) {
-    if (*a > *b) {          // 큰 수에 +25, 작은 수는 /2
+    if (*a > *b) {        // a가 더 큼
         *a += 25;
-        *b /= 2;
-    } else {
+        *b *= 2;
+    } else {              // b가 더 큼
         *b += 25;
-        *a /= 2;
+        *a *= 2;
     }
 }
 
