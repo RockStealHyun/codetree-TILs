@@ -1,18 +1,23 @@
 #include <stdio.h>
 
-void f(int n){
-    printf("%d ", n);          // 내려가며 출력
-    if (n == 1){               // 바닥에서 1 한 번 더
-        printf("1 ");
-        return;
-    }
-    f(n - 1);                  // 재귀
-    printf("%d ", n);          // 올라오며 출력
+void star(int n) {                 // n개 별 + 공백 출력
+    for (int i = 0; i < n; i++) printf("* ");
+    putchar('\n');
 }
 
-int main(void){
-    int N;
-    scanf("%d", &N);
-    f(N);
+void pattern(int n) {              // 내려갔다가 올라오기
+    star(n);                       // n, n-1, ..., 1
+    if (n == 1) {                  // 1을 한 번 더 찍어야 2n줄
+        star(1);
+        return;
+    }
+    pattern(n - 1);                // 재귀
+    star(n);                       // ..., 1, 2, ..., n
+}
+
+int main(void) {
+    int n;
+    scanf("%d", &n);
+    pattern(n);
     return 0;
 }
